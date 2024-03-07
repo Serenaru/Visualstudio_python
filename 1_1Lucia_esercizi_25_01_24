@@ -1,0 +1,230 @@
+
+#lista
+#insieme di stringhe, interi o float 
+
+#la variabile permette di salvare in memoria
+#a="1"
+#linguaggio sequenziale 
+#a=1 
+#a="1"
+
+#accedere all'indice 1
+#a=[1,2,3,5]
+#print(a[0])
+
+#if, manovre che fa l'utente 
+#manovre ripetute più volte es(pass.richiesta più volte)
+#if 
+#x>10 
+
+#elif si usa quando esistono svariate condizioni 
+#per annidare più if usare elif
+
+#else non ha vicino una condizione quindi si usa quando la condizione è falsa 
+#elif quando è vera
+
+#x=3
+#if x > 5:
+#    print("x è > 5")    #(il 3 non è maggiore di 5 quindi ci metto un else)
+
+
+#inserire numero
+x=int(input("inserisci primo numero"))
+print(x)
+y=int(input("inserisci secondo numero"))
+
+if x>y:
+    print("il primo numero è maggiore di x")
+elif x==y:
+    print("i due numeri sono =")
+else:
+    print("il primo numero è maggiore di y") 
+
+
+
+#assegna la variabile x al valore y 
+#con == valuti se è vero che due numeri sono uguali
+x==y 
+#assegnazione 
+x=y #dai un nuovo valore a x
+
+
+print("inserisci il numero")
+n1=input() 
+n1=int(n1)
+if(n1 % 2 == 0):
+    print("il numero è pari")
+else:
+    print("il numero è dispari")
+
+
+
+#ESERCIZI LUCIA
+
+#verificare se un numero è pari o dispari
+
+x=n1%2         #prendi un numero e lo dividi per 2, se il RESTO è 0 il numero è pari sennò è dispari
+if(x == 0):
+    print(x == 0)#numero pari
+else:
+    #numero dispari
+
+
+
+
+#Chiedere all’utente di inserire la sua età e verificare se è maggiorenne  
+
+    x=input("inserisci un numero ")
+x=int(x)
+if(x>=18):
+    print("sei maggiorenne")
+else:
+    print("non sei maggiorenne")
+
+
+
+#verificare che il numero inserito sia nell'intervallo tra 10 e 20
+
+x=input("inserisci un valore")
+x=int(x) 
+if(10<= x <=20):
+    print("è compreso!")
+else:
+    print("non è compreso")
+
+
+
+
+#Data la lista di numeri Mylist=[1,2,3,5,12,18,19,26,28] 
+#Estrai i numeri pari e i numeri dispari poi allocali in due liste separate e stampale. 
+
+
+Mylist=[1,2,3,5,12,18,19,26,28]
+num_pari=[]                  #inizializzo due liste vuote per metterci qualcosa e inseriamo .append per popolare una lista 
+num_dispari=[]
+for element in Mylist: 
+    print("l'elemento corrente è: ",element)                          #uso un ciclo for perchè so quanto è lunga la mia lista 
+    if element %2 == 0:
+        num_pari.append(element)
+        print("sono entrato tra i pari")
+        print("popolando la lista pari...", num_pari)
+    else:
+        num_dispari.append(element)
+        print("---> sono entrato tra i dispari")
+        print("popolando la lista dispari...", num_dispari)
+print(num_pari)
+print(num_dispari) 
+
+
+
+
+
+
+#Verificare se un anno inserito (esempio 2024) è bisestile (un anno è bisestile se è divisibile per 4 & non per 100 oppure se è divisibile per 400)
+
+
+#annidare le condizioni
+#o è divisibile per 4 e non per 100     (pari)
+#o è divisibile per 100                 (dispari)
+
+#((x % 4 "deve dare 0")&(x%100=0 "se non c'è il resto è divisibile per 100")) or (    )
+
+#x%4 calco il resto(se il resto è 0 allora questa espressione è vera, se il resto c'è la condizione è falsa)
+
+
+
+anno=int(input("inserisci un anno "))
+if(anno%4==0 and anno%100!=0) or (anno%400==0):
+  print("anno bisestile")
+else:
+  print("anno non bisestile")
+
+
+
+
+anno=int(input("inserisci un anno "))
+if(anno%4==0 and anno%100!=0) or (anno%400==0):
+  print(f"anno {anno} é bisestile")
+else:
+  print("anno non bisestile")
+
+
+
+
+
+#Dato un numero da 1 a 7, stampa il giorno della settimana corrispondente.
+
+giorno=int(input("inserisci un numero da 1 a 7 per definire il giorno"))
+list_settimana=["lunedì","martedì","mercoledì","giovedì","venerdì","sabato","domenica"]
+
+if giorno == 1:
+    print(list_settimana[0])
+elif giorno == 2:
+    print(list_settimana[1])
+elif giorno == 3:
+    print(list_settimana[2])
+elif giorno == 4:
+    print(list_settimana[3])
+elif giorno == 5:
+    print(list_settimana[4])
+elif giorno == 6:
+    print(list_settimana[5])
+elif giorno == 7:
+    print(list_settimana[6])
+elif giorno == 8:
+    print(list_settimana[7])
+
+
+#Dato un numero da 1 a 7, stampa il giorno della settimana corrispondente. (CON IL WHILE)
+    settimana = ["Lunedì", "Martedi", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
+while True:
+    n1 = int(input("Inserisci numero: "))
+    if 1 <= n1 <= 7:
+        break
+    else:
+        continue
+print(settimana[n1 - 1])
+
+
+
+
+
+#Calcola la tassa basata su diversi scaglioni di reddito (<10.000 <20.000 >20.000). Moltiplicatori (0.05, 0.1, 0.15)
+
+#L'utente inserisce il reddito e fare i vari print
+#registro il reddito nella variabile 
+
+
+x=int(input("inserisci il tuo reddito"))
+print(x)
+if x<10000:
+    print(x*0.05)
+elif x<20000:
+    print(x*0.1)
+elif x>20000:
+    print(x*0.15)
+
+
+#Realizza una calcolatrice che esegue operazioni di base (+, -, *, /) in base all'input dell'utente.
+
+
+
+#Permettere all’utente di inserire 10 numeri per ciascun numero calcolare il quadrato e creare iterativamente una lista che contenga in ordine il numero inserito e il suo quadrato
+
+#dato un numero il secondo deve essere il suo quadrato
+#creare una lista 
+
+
+lista=[]
+for n in range(10):    #numero predefinito di cicli da fare 
+    #chiedere all'utente di inserire un numero 
+    x=int(input("inserisci un numero"))
+    lista.append(x) 
+    print(lista)                     #printare sequenzialmente tutte le variabili 
+    y=x*x
+    print(y)
+    lista.append(y)
+    print(lista)
+
+#print(lista)
+ 

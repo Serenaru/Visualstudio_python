@@ -1,0 +1,160 @@
+#EMAIL PROF: l.migliorelli@staff.univpm.it
+
+#dati #stringhe 
+
+#sky+8
+#variabile:va in memoria 
+#3 è un intero 
+#3.0 dato float (la maschera (parte visibile), nelle reti neuronali visualizza il dato con numero con la virgola)
+
+#stringa: parole(lettere,numeri,simboli)
+#il punto(per upper)definisce un metodo
+#convertire il maiuscolo in minuscolo per renderlo chiaro nel database 
+ss="Sammy Shark"
+print(ss.upper())     #trasforma in maiuscolo
+print(ss.lower())     #trasforma in minuscolo, il punto è un operatore
+
+
+
+#metodi booleani (valutare la veridicità delle spressioni)
+#convertitore che dirà che questo booleano finchè non diventa vero non puoi andare avanti 
+str="ciao"
+print(str.isalnum())  
+
+
+
+
+#esercizio
+movie = "2001: A SAMMY ODYSSEY"
+book = "A Thousand Splendid Sharks"
+poem = "sammy lived in a pretty how town"
+
+
+
+#controllare se la prima stringa è in caratteri minuscoli
+movie = "2001: A SAMMY ODYSSEY"
+print(movie.islower())
+
+#controllare se la stringa ha tutti i caratteri alfabetici
+#lo spazio non è un carattere
+book = "A Thousand Splendid Sharks"
+print(book.isalpha())
+
+
+#la stringa è in caratteri maiuscoli 
+poem = "sammy lived in a pretty how town"
+print(poem.isupper())
+
+
+#str.join (per unire due stringhe)
+#join (giunzione)
+x=" Sammy contribute to open source"
+y=" Sammy drink coffe"
+print((x,y).join(x,y))
+
+#.join()
+x="Il mio gatto è sempre fuori,"
+y=" infatti si chiama Escher."
+
+Frase_concatenata= [x,y]
+risultato=("".join(Frase_concatenata))
+print(risultato)
+
+
+#join
+#il join si alimenta con una sola lista di stringhe o con più stringhe 
+x=["1","2","3","4"]
+y=["5","6","7","8"]
+separatore="+"
+print(separatore.join(x))      
+print(separatore.join(x + y))
+
+x= "Gianluca puzza "
+y= "per questo Serena gli dice di farsi una doccia."
+separa=""
+print(separa.join(x + y))
+
+
+#.join(altro metodo)
+io=["serena","gianluca"] 
+x= " 2 ".join(io)
+print(x)
+
+
+#.split  (prende le parole di una stringa e lo divide)
+#da una stringa ti crea una lista di stringhe separate da spazi bianchi
+x="Gianluca puzza"
+print(x.split())
+
+
+
+#INDICI DI STRINGA
+#Indice o positiva o negativa 
+#conteggiare la posizione dello spazio (accede ad un carattere con la posizione del carattere es.y= 4 e -8)
+#il conteggio inizia da 0
+x= "ciao" 
+print(x[2])
+#indice di inizio:indice di fine  (es. per identificare la parola shark fare lo SLICING= 6:11)
+x= "slice shark"
+print(x[5:9])
+
+#len (lent=lunghezza)   
+#per prendere un pezzo (x[0:5])
+x= "slice shark"
+print(len(x))
+print(x[0:5])
+
+#altri metodi per rappresentare lo SLICING
+x[6:12]
+x[6:len(x)]
+x[6:]
+
+
+#stride
+x= "sammy shark!"
+print(x[0:12:2])
+#primi due valori per lo slicing e l'ultimo per fare un passo
+#per prendere un carattere della stringa salti ogni 2(il 2 è il terzo valore)
+
+#count
+#solo minuscole
+x= "sammy shark!"
+print(x.count("s"))
+
+#maiuscole e minuscole
+x= "Sammy shark!"
+y= "Sammy shark!"
+print(x.count("S") and y.count("s"))
+
+
+
+#find  
+#il secondo shark sta in posizione 6
+shark= "Sammy shark sammy shark!"
+print(shark.find("shark", 0))  
+
+
+#le liste 
+sea_creatures=["shark","cuttlefish","squid"]
+print(sea_creatures)
+sea_creatures[0]="anemone"
+print(sea_creatures)
+#riassegno una posizione al valore in memoria 
+
+
+#del   
+#(sfrutta lo slicing, elimina gli elementi all'interno) 
+sea_creatures=["shark","cuttlefish","squid"]
+#del sea_creatures  
+del sea_creatures[0:1]
+print(sea_creatures)
+
+
+
+#da due liste prenderne una parola da ogniuna delle due liste 
+#in questo modo non sarà più una lista di liste ma una matrice, con le parentesi fuori sarà una lista di liste
+sea_creatures=["shark","cuttlefish","squid"],["shark","cuttlefish","squid"] 
+print(sea_creatures[0][1])
+print(sea_creatures[1][2])
+
+
